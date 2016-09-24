@@ -44,7 +44,8 @@ PRODUCT_PACKAGES += \
     ViaBrowser \
     AEXPapers \
     Phonograph \
-    WallpaperPickerGoogle
+    WallpaperPickerGoogle \
+    GoogleDialer
 
 # Themes
 PRODUCT_PACKAGES += \
@@ -153,3 +154,12 @@ PRODUCT_PACKAGES += \
 
 # Recommend using the non debug dexpreopter
 USE_DEX2OAT_DEBUG ?= false
+
+# Dialer Jar
+PRODUCT_PACKAGES += \
+    com.google.android.dialer.support \
+
+# Dialer Permissions
+PRODUCT_COPY_FILES += \
+    vendor/aosp/etc/permissions/com.google.android.dialer.support.xml:system/etc/permissions/com.google.android.dialer.support.xml
+
